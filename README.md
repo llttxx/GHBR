@@ -2,15 +2,15 @@
 
 ## Environment Requirements
 
-* `python==3.7`<br>  
-* `pytorch==1.1.0`<br>
-* `torchvision==0.3.0`<br>
+* `python==3.7.8`<br>  
+* `pytorch==1.13.1`<br>
+* `torchvision==0.14.1`<br>
 
 ## Data preparation
 
-To run the code, you can download IU X-Ray and MIMIC-CXR datasets.<br>
+To run the code, you can download Br35H and ZhangLab Chest X-rays datasets.<br>
 
-* For IU X-Ray, you can download the dataset from [IU X-Ray link](https://drive.google.com/file/d/1c0BXEuDy8Cmm2jfN0YYGkQxFZd2ZIoLg/view?usp=sharing"悬停显示") and then put the data files in yourdata/iu_xray.<br>
+* For Br35H, you can download the dataset from [Br35H link](https://www.kaggle.com/datasets/ahmedhamada0/brain-tumor-detection"悬停显示") and then put the data files in yourdata/br35h.<br>
 
 * For MIMIC-CXR, you can download the dataset from [MIMIC-CXR link](https://drive.google.com/file/d/1DS6NYirOXQf8qYieSVMvqNwuOlgAbM_E/view?usp=sharing"悬停显示") and then put the data files in yourdata/mimic_cxr. You can apply the dataset here with your license of PhysioNet.<br>
 
