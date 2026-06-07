@@ -12,7 +12,7 @@
 
 ## Data preparation
 
-To run the code, you can download Br35H and APTOS datasets.<br>
+To run the code, you can download Br35H, APTOS, OCT2017 and ZhangLab ChestX-ray datasets.<br>
 
 * For Br35H, you can download the dataset from [Br35H link](https://www.kaggle.com/datasets/ahmedhamada0/brain-tumor-detection"悬停显示") and then put the data files in yourdata/br35h.<br>
 
