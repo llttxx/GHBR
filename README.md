@@ -5,32 +5,36 @@
 * `python==3.7.8`<br>  
 * `pytorch==1.13.1`<br>
 * `torchvision==0.14.1`<br>
+* `matplotlib==3.3.2`<br>
+* `torch_geometric==2.3.1`<br>
+* `cv2==4.12.0`<br>
+* `sklearn==0.24.2`<br>
 
 ## Data preparation
 
-To run the code, you can download Br35H and ZhangLab Chest X-rays datasets.<br>
+To run the code, you can download Br35H and APTOS datasets.<br>
 
 * For Br35H, you can download the dataset from [Br35H link](https://www.kaggle.com/datasets/ahmedhamada0/brain-tumor-detection"悬停显示") and then put the data files in yourdata/br35h.<br>
 
-* For MIMIC-CXR, you can download the dataset from [MIMIC-CXR link](https://drive.google.com/file/d/1DS6NYirOXQf8qYieSVMvqNwuOlgAbM_E/view?usp=sharing"悬停显示") and then put the data files in yourdata/mimic_cxr. You can apply the dataset here with your license of PhysioNet.<br>
+* For APTOS, you can download the dataset from [APTOS link](https://www.kaggle.com/c/aptos2019-blindness-detection"悬停显示") and then put the data files in yourdata/aptos. You can apply the dataset here with your license of PhysioNet.<br>
 
-NOTE: The IU X-Ray dataset is of small size, and thus the variance of the results is large.<br> 
+* For OCT2017 and ZhangLab ChestX-ray, you can download the dataset from [OCT2017 and ZhangLab ChestX-ray link](https://data.mendeley.com/datasets/rscbjbr9sj/2"悬停显示") and then put the data files in yourdata/oct or yourdata/chestx-ray .<br>
 
 ## Training procedure
 
-Run python train_AERMNet.py using the following arguments:<br>
+Run python train_GHBR_br35h.py using the following arguments:<br>
 |Argument|Possible values|
 |:--:|:----:|
-|--epochs |the number of epochs (default: 50) |
+|--num_train_iter |the number of iterations for model training (default: 5000) |
 |--batch_size|Batch size (default: 32) |
 |--workers |Number of workers (default: 2)|
-|--data_folder|Folder path to save files|
-|--data_folder_new|Folder path where checkpoint files are saved|
+|--save_dir|Save the training results of the model|  
+|--data_dir|Path for loading image data|
+|--data_path|Path for saving granular rectangle|
 |--lr|learning rate|
-|--decoder_dim|Number of decoder layers|
-|--alpha_c|Regularization parameters|
+|--image_size|Size of the image (default: 256)|
 
-Run `train_AERMNet.py` to train a model on the IU X-Ray data and the MIMIC-CXR data <br> 
+Run `train_GHBR_br35h.py` to train a model on the Br35H data <br> 
 
 ## Test
-Run `test_AERMNet.py` to test AERMNet model on the IU X-Ray data and the MIMIC-CXR data. <br> 
+Run `test_GHBR.py` to test GHBR model on the Br35H data, APTOS data, OCT2017 and ZhangLab ChestX-ray data. <br> 
