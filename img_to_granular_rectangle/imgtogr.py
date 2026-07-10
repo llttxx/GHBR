@@ -4,12 +4,12 @@ import cv2
 import h5py
 from multiprocessing import Process, Manager
 from torchvision import datasets
-import numpy as np  # 确保导入 numpy
+import numpy as np 
 
 
 def save_imagetoh5(input_data, output_dir):
     for img, label, image_name in input_data:
-        x, adj, edge_attr, center_index = granular_rectangle_generate(img)   #ball2graph_rgb_hsv(img)
+        x, adj, edge_attr, center_index = granular_rectangle_generate(img)   
 
         # Create output path
         set_class_dir = os.path.join(output_dir, str(label))
@@ -49,6 +49,6 @@ def process_data(dataset, output_dir, set_name):
 
 if __name__ == '__main__':
 
-    # 处理训练集和验证集
+    # Process the training set and validation set
     process_data(train_dataset, output_dir, 'train')
     process_data(val_dataset, output_dir, 'val')
