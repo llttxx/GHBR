@@ -48,7 +48,6 @@ def process_data(dataset, output_dir, set_name):
         proc.join()
 
 if __name__ == '__main__':
-
     # Process the training set and validation set
     process_data(train_dataset, output_dir, 'train')
     process_data(val_dataset, output_dir, 'val')
