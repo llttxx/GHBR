@@ -274,10 +274,6 @@ class ResNet(nn.Module):
         f3 = self.layer3(f2)
         f4 = self.layer4(f3)
         
-        """
-        """
-        #f4 = self.ca1(f4) * f4    #self.ca1不参与模型的训练
-
         return f1, f2, f3, f4
 
 
