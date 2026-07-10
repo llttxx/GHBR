@@ -213,7 +213,7 @@ class ResNet(nn.Module):
         """
         
         """
-        # 网络的卷积层的最后一层加入注意力机制
+        
         #self.ca1 = ChannelAttention(self.inplanes)
         
         self.avgpool = nn.AdaptiveAvgPool2d((1, 1))
