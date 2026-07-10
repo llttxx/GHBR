@@ -6,7 +6,6 @@ from multiprocessing import Process, Manager
 from torchvision import datasets
 import numpy as np 
 
-
 def save_imagetoh5(input_data, output_dir):
     for img, label, image_name in input_data:
         x, adj, edge_attr, center_index = granular_rectangle_generate(img)   
