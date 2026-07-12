@@ -17,7 +17,7 @@ from img2graph.img2graph import granular_balls_generate
 from sklearn.manifold import TSNE
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D 
-from datasets.dataset import AD_Dataset
+from datasets.dataset import GHBR_Dataset
 from datasets.data_utils import get_data_loader
 from ghbrmodel import R50_R50
 from models.GBR import GCN_8_plus
@@ -81,7 +81,7 @@ def testimg(save_visual=True, visualize_tsne=False):
 
     # define eval_loader
     data_dir = r"E:/Br35H"
-    eval_dset = AD_Dataset(name='mri',train=False,data_dir=data_dir)
+    eval_dset = GHBR_Dataset(name='mri',train=False,data_dir=data_dir)
     eval_dset = eval_dset.get_dset()
     eval_loader = get_data_loader(eval_dset,64,num_workers=1,drop_last=False,pin_memory=False)
     print('eval_loader is ready')
