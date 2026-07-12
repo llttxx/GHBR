@@ -10,7 +10,7 @@ import torch.backends.cudnn as cudnn
 from utils import get_logger, count_parameters, over_write_args_from_file
 from train_utils import TBLog, get_optimizer_v2, get_multistep_schedule_with_warmup
 from ghbrmethod import GHBR
-from datasets.dataset import AD_Dataset
+from datasets.dataset import GHBR_Dataset
 
 from datasets.data_utils import get_data_loader
 from ghbrmodel import R50_R50
@@ -88,10 +88,10 @@ def main_worker(gpu, args):
 
     # Construct Dataset & DataLoader
 
-    train_dset = AD_Dataset(name=args.dataset, train=True, data_dir=args.data_dir)
+    train_dset = GHBR_Dataset(name=args.dataset, train=True, data_dir=args.data_dir)
     train_dset = train_dset.get_dset()
     print('TrainSet Image Number:', len(train_dset))
-    eval_dset = AD_Dataset(name=args.dataset, train=False, data_dir=args.data_dir)
+    eval_dset = GHBR_Dataset(name=args.dataset, train=False, data_dir=args.data_dir)
     eval_dset = eval_dset.get_dset()
     print('EvalSet Image Number:', len(eval_dset))
 
